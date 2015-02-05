@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'cc_icons-regular';
+  src: url('../fonts/cc-icons-webfont.eot');
+  src: url('../fonts/cc-icons-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/cc-icons-webfont.woff') format('woff'),
+     url('../fonts/cc-icons-webfont.ttf') format('truetype'),
+     url('../fonts/cc-icons-webfont.svg#cc_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: 'myriad-pro', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+footer {
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0 0;
+}
+
+footer .row > div {
+  padding: 40px 0;
+}
+
+footer .row + .row > .text-center {
+  border-top: #CCC 1px solid;
+}
+
+.cc {
+  font-family: 'cc_icons-regular';
+}
+
+.cover {
+  background-color: #000;
+  background-size: 100%;
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000;
+}
+
+.cover > .icon {
+  position: absolute;
+  top: 50%;
+  height: 2em;
+  margin-top: -1em;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-brand {
+  padding: 5px;
+  line-height: 40px;
+}
+
+#intro {
+  background: #000 url('../images/centennialshade.png') 50% 0 fixed no-repeat;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(255,255,255,0.8);
+  padding: 450px 0 150px;
+  color: #fff;
+}
+
+#intro .countdown {
+  margin-top: -350px;
+}
+
+#location {
+  background: #fff url('../images/airstation.jpg') 50% 0 fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#map {
+  min-height: 500px;
+}
+
+#schedule {
+  background: #fff url('https://farm5.staticflickr.com/4120/4871612353_f05ebf5dee_o.jpg') 50% 0 fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#vips {
+  background: #E31837;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#vips .container {
+  background: #fff;
+}
+
+#parents {
+  background: #fff url('../images/vigilsashbackdrop.jpg') 50% 0 fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#parents .container {
+  background-color: rgba(255,255,255,0.9);
+}
+
+#eventdetails {
+  background: #fff url('../images/lasers.jpg') 50% 0 fixed;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#eventdetails .container {
+  background: rgba(255,255,255,0.9);
+}
+
+#faq {
+  background: #fff;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 50px 0 100px;
+}
+
+#register {
+  background: #fff;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 50px 0 100px;
+}
+
+.blur {
+  box-shadow:
+    0px 0px 0px 10px rgba(255,255,255,1),
+    1px 1px 3px 10px rgba(0,0,0,0.2);
+  transition:
+    opacity 0.2s linear,
+    text-shadow 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+}
+
+.blur td, .blur th, .blur a, .blur {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0);
+  opacity: 0.5;
+}
+
+.btn-danger {
+  background-color: #E31837;
+}
