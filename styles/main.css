@@ -131,7 +131,14 @@ footer .row + .row > .text-center {
 }
 
 #map {
+  min-height: 200px;
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  #map {
+    min-height: 500px;
+  }
 }
 
 #schedule {
