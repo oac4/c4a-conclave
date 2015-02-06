@@ -70,6 +70,42 @@ footer .row + .row > .text-center {
   margin-top: -350px;
 }
 
+.idbar {
+  max-height: 601px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50;
+  margin: 0 -50%;
+  text-align: center;
+}
+
+.idbar h3 {
+  background: #E31837;
+  color: #fff;
+  padding: 35px 0 0;
+
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.idbar h3 .incognito {
+  color: #E31837;
+}
+
 #location {
   background: #fff url('../images/airstation.jpg') 50% 0 fixed;
   height: auto;
@@ -95,7 +131,7 @@ footer .row + .row > .text-center {
 }
 
 #map {
-  min-height: 500px;
+  width: 100%;
 }
 
 #schedule {
