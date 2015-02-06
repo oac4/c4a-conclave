@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Conclave 2015</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="./styles/landing.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      (function(d) {
+        var config = {
+          kitId: 'yhj6doj',
+          scriptTimeout: 3000
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Section C-4A Conclave</h3>
+            </div>
+          </div>
+          <div class="inner cover">
+            <h1 class="cover-heading" id="countdown" style="display:none;">Celebrating 100 years</h1>
+            <p class="lead" style="display:none;" id="logo">
+              May 15-17 at the Youngstown Air Reserve Station in Vienna, Ohio<br /><br />
+              <img alt="100 Order of the Arrow 1915-2015" class="img-responsive" src="./images/OA100_StandardReversedOneColorLogo.png" height="317" width="417">
+            </p>
+          </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>&copy; 2014 <a href="http://www.oa-c4.org/">Central Region Area 4</a>, <a href="http://www.oa-bsa.org/">Order of the Arrow</a>, <a href="http://scouting.org/">Boy Scouts of America</a>. All Rights Reserved.<br />Image credit: <a href="https://www.flickr.com/photos/stevejb68/">stevejb68</a> used under license <a class="cc-license" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">cbnd</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      // the difference timestamp (UNIX) calculated from event timestamp minus current timestamp
+      var timestamp = 1431712800 - Math.round(new Date().getTime() / 1000);
+      function component(x, v) {
+        return Math.floor(x / v);
+      }
+      var $div = $('#countdown');
+      setInterval(function() {
+      timestamp--;
+      var days    = component(timestamp, 24 * 60 * 60),      // calculate days from timestamp
+        hours   = component(timestamp,      60 * 60) % 24, // hours
+        minutes = component(timestamp,           60) % 60, // minutes
+        seconds = component(timestamp,            1) % 60; // seconds
+        $div.html("Celebrating 100 years in " + days + " days ");// + hours + " hours " + minutes + " minutes " + seconds + " seconds ");
+      }, 1000);
+      setTimeout(function () { $('#countdown').fadeIn(1000); $('#logo').fadeIn(2500); }, 1000);
+    </script>
+  </body>
+</html>
