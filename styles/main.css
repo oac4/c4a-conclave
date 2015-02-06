@@ -80,6 +80,20 @@ footer .row + .row > .text-center {
   padding: 100px 0;
 }
 
+#letter {
+  background: #36454F;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 100px 0;
+}
+
+#letter .container {
+  background: #fff;
+}
+
 #map {
   min-height: 500px;
 }
