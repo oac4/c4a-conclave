@@ -755,6 +755,7 @@
               </tfoot>
             </table>
           </div>
+          <p>All lodges have a goal for attendance equal to 10% of their last recorded membership total in LodgeMaster.</p>
           <p>
             Two important notes related to Conclave 2015 being on an active military installation:<br>
             <ul>
@@ -924,7 +925,9 @@
         }).siblings();
 
         $(cells[0]).html(totalRegs);
-        $(cells[1]).html(totalGoal);
+        if(parseInt($(cells[1]).html()) <= totalGoal) {
+          $(cells[1]).html(totalGoal);
+        }
         $(cells[2]).html(((totalRegs / totalGoal) * 100).toFixed(2) + "%");
       }
 
