@@ -188,6 +188,16 @@ footer .row + .row > .text-center {
   padding: 100px 0;
 }
 
+#training {
+  background: #fff;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  padding: 50px 0 100px;
+}
+
 #eventdetails .container {
   background: rgba(255,255,255,0.9);
 }
