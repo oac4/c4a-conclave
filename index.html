@@ -699,6 +699,7 @@
                   <th>Registered</th>
                   <th>Goal</th>
                   <th>Progress</th>
+                  <th>Man-Miles</th>
                 </tr>
               </tbody>
               <tbody>
@@ -707,42 +708,49 @@
                   <td>0</td>
                   <td>28</td>
                   <td>0%</td>
+                  <td>65.9</td>
                 </tr>
                 <tr>
                   <td>Onondaga - 36</td>
                   <td>0</td>
                   <td>19</td>
                   <td>0%</td>
+                  <td>98.6</td>
                 </tr>
                 <tr>
                   <td>Wapashuwi - 56</td>
                   <td>0</td>
                   <td>42</td>
                   <td>0%</td>
+                  <td>14.6</td>
                 </tr>
                 <tr>
                   <td>Marnoc - 151</td>
                   <td>0</td>
                   <td>79</td>
                   <td>0%</td>
+                  <td>56.9</td>
                 </tr>
                 <tr>
                   <td>Sipp-O - 377</td>
                   <td>0</td>
                   <td>85</td>
                   <td>0%</td>
+                  <td>63</td>
                 </tr>
                 <tr>
                   <td>Portage - 619</td>
                   <td>0</td>
                   <td>54</td>
                   <td>0%</td>
+                  <td>117</td>
                 </tr>
                 <tr>
                   <td>At large</td>
                   <td>0</td>
                   <td>0</td>
                   <td>0%</td>
+                  <td>0</td>
                 </tr>
               </tbody>
               <tfoot>
@@ -751,6 +759,7 @@
                   <td>0</td>
                   <td>307</td>
                   <td>0%</td>
+                  <td>0</td>
                 </tr>
               </tfoot>
             </table>
@@ -901,6 +910,7 @@
       function loadGoals(data) {
         var totalRegs = 0;
         var totalGoal = 0;
+        var totalMile = 0;
 
         $.each(data.goals, function(index,value){
           var cells = $("#register td").filter(function(index){
@@ -909,6 +919,7 @@
 
           totalRegs += parseInt(value.registered);
           totalGoal += parseInt(value.goal);
+          totalMile += parseInt(value.registered) * parseInt($(cells[3]).html());
           var goal = parseInt(value.goal);
 
           $(cells[0]).html(value.registered);
@@ -918,6 +929,7 @@
           } else {
             $(cells[2]).html(((parseInt(value.registered) / goal) * 100).toFixed(2) + "%");
           }
+          $(cells[3]).html(parseInt(value.registered) * parseInt($(cells[3]).html()));
         });
 
         var cells = $("#register td").filter(function(index){
@@ -929,6 +941,7 @@
           $(cells[1]).html(totalGoal);
         }
         $(cells[2]).html(((totalRegs / totalGoal) * 100).toFixed(2) + "%");
+        $(cells[3]).html(totalMile.toFixed(0));
       }
 
       function mapRoute(start) {
