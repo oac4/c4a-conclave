@@ -706,42 +706,42 @@
                 <tr>
                   <td>Cuyahoga - 17</td>
                   <td>0</td>
-                  <td>28</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>65.9</td>
                 </tr>
                 <tr>
                   <td>Onondaga - 36</td>
                   <td>0</td>
-                  <td>19</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>98.6</td>
                 </tr>
                 <tr>
                   <td>Wapashuwi - 56</td>
                   <td>0</td>
-                  <td>42</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>14.6</td>
                 </tr>
                 <tr>
                   <td>Marnoc - 151</td>
                   <td>0</td>
-                  <td>79</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>56.9</td>
                 </tr>
                 <tr>
                   <td>Sipp-O - 377</td>
                   <td>0</td>
-                  <td>85</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>63</td>
                 </tr>
                 <tr>
                   <td>Portage - 619</td>
                   <td>0</td>
-                  <td>54</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>117</td>
                 </tr>
@@ -757,7 +757,7 @@
                 <tr>
                   <td>Conclave Total</td>
                   <td>0</td>
-                  <td>307</td>
+                  <td>0</td>
                   <td>0%</td>
                   <td>0</td>
                 </tr>
@@ -794,11 +794,11 @@
             </tbody>
             <tbody>
               <tr>
-                <td>Until April 18<sup>th</sup></td>
+                <td>Through April 19<sup>th</sup></td>
                 <td>$50.00</td>
               </tr>
               <tr>
-                <td>April 19<sup>th</sup> - April 30<sup>th</sup></td>
+                <td>April 20<sup>th</sup> - April 30<sup>th</sup></td>
                 <td>$55.00</td>
               </tr>
               <tr>
@@ -917,19 +917,25 @@
             return $(this).text().search(value.name) >= 0;
           }).siblings();
 
+          if(cells.length == 0) {
+            cells = $("#register td").filter(function(index){
+              return $(this).text().search("At Large") >= 0;
+            }).siblings();
+          }
+
           totalRegs += parseInt(value.registered);
           totalGoal += parseInt(value.goal);
-          totalMile += parseInt(value.registered) * parseInt($(cells[3]).html());
+          totalMile += parseInt(value.registered) * parseInt($(cells[3]).text());
           var goal = parseInt(value.goal);
 
-          $(cells[0]).html(value.registered);
-          $(cells[1]).html(value.goal);
+          $(cells[0]).html(parseInt($(cells[0]).text()) + value.registered);
+          $(cells[1]).html(parseInt($(cells[1]).text()) + value.goal);
           if(goal == 0) {
-            $(cells[2]).html((parseInt(value.registered) * 100).toFixed(2) + "%");
+            $(cells[2]).html("100.00%");
           } else {
-            $(cells[2]).html(((parseInt(value.registered) / goal) * 100).toFixed(2) + "%");
+            $(cells[2]).html(((parseInt($(cells[0]).text()) / parseInt($(cells[1]).text())) * 100).toFixed(2) + "%");
           }
-          $(cells[3]).html(parseInt(value.registered) * parseInt($(cells[3]).html()));
+          $(cells[3]).html(parseInt($(cells[0]).text()) * parseInt($(cells[3]).text()));
         });
 
         var cells = $("#register td").filter(function(index){
@@ -937,7 +943,7 @@
         }).siblings();
 
         $(cells[0]).html(totalRegs);
-        if(parseInt($(cells[1]).html()) <= totalGoal) {
+        if(parseInt($(cells[1]).text()) <= totalGoal) {
           $(cells[1]).html(totalGoal);
         }
         $(cells[2]).html(((totalRegs / totalGoal) * 100).toFixed(2) + "%");
