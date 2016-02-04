@@ -1005,6 +1005,8 @@
           }); // end window scroll
         });  // end section function
 
+        $(".cover").fadeOut("slow");
+        /*
         try {
           Typekit.load({
             active: function() {
@@ -1033,7 +1035,7 @@
           "<button onclick='mapRoute(document.getElementById(\"start_address\").value)'>Route</button>")
           .openPopup();
 
-          /* Create HTML5 element for IE */
+          /* Create HTML5 element for IE *//*
           document.createElement("section");
 
           // the difference timestamp (UNIX) calculated from event timestamp minus current timestamp
@@ -1070,6 +1072,7 @@
         } catch(e) {
           $(".cover").fadeOut("slow");
         }
+        */
       }); // close out script
 
       /* var bcf_settings = { buttonText:'Contact Us', buttonTop:'30%', language:'en_US' }; // Better Contact Form Settings */
