@@ -1,21 +1,33 @@
-@font-face {
-  font-family: 'cc_icons-regular';
-  src: url('../fonts/cc-icons-webfont.eot');
-  src: url('../fonts/cc-icons-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/cc-icons-webfont.woff') format('woff'),
-     url('../fonts/cc-icons-webfont.ttf') format('truetype'),
-     url('../fonts/cc-icons-webfont.svg#cc_iconsregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+html, body, pre {
+  border: none;
+  background: #000;
+  color: #0F0;
+  font-family: 'Source Code Pro', 'Andale Mono', 'Lucida Console', Consolas, Courier, monospace;
 }
 
-html,
-body {
-  font-family: 'myriad-pro', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+a, a:link, a:visited,
+.close, .close:hover,
+.navbar-inverse .navbar-nav > li > a {
+  color: #0F0;
+  text-decoration: underline;
+}
+
+a:active, a:hover,
+.close, .close:hover,
+.navbar-inverse .navbar-nav > li > a {
+  text-decoration: none;
+}
+
+.modal-content, .nav>li>a:focus, .nav>li>a:hover {
+  background-color: #222;
+}
+
+.modal-header {
+  border-bottom: #000 1px solid;
 }
 
 footer {
-  padding: 100px 0 0;
+  padding: 50px 0 0;
 }
 
 footer .row > div {
@@ -23,203 +35,12 @@ footer .row > div {
 }
 
 footer .row + .row > .text-center {
-  border-top: #CCC 1px solid;
-}
-
-.cc {
-  font-family: 'cc_icons-regular';
-}
-
-.cover {
-  background-color: #000;
-  background-size: 100%;
-  display: block;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 1000000;
-}
-
-.cover > .icon {
-  position: absolute;
-  top: 50%;
-  height: 2em;
-  margin-top: -1em;
-  width: 100%;
-  text-align: center;
-}
-
-.navbar-brand {
-  padding: 5px;
-  line-height: 40px;
+  border-top: #0F0 1px dashed;
 }
 
 #intro {
-  background: #000 url('../images/centennialshade.png') 50% 0 fixed no-repeat;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(255,255,255,0.8);
-  padding: 450px 0 150px;
-  color: #fff;
-}
-
-#intro .countdown {
-  margin-top: -350px;
-}
-
-.idbar {
-  max-height: 601px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 50;
-  margin: 0 -50%;
+  padding: 120px 0;
   text-align: center;
-}
-
-.idbar h3 {
-  background: #E31837;
-  color: #fff;
-  padding: 35px 0 0;
-
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-
-  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  /* Should be unset in IE9+ I think. */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
-
-.idbar h3 .incognito {
-  color: #E31837;
-}
-
-#location {
-  background: #fff url('../images/airstation.jpg') 50% 0 fixed;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 100px 0;
-}
-
-#letter {
-  background: #36454F;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 100px 0;
-}
-
-#letter .container {
-  background: #fff;
-}
-
-#map {
-  min-height: 200px;
-  width: 100%;
-}
-
-@media (min-width: 992px) {
-  #map {
-    min-height: 500px;
-  }
-}
-
-#schedule {
-  background: #fff url('https://farm5.staticflickr.com/4120/4871612353_f05ebf5dee_o.jpg') 50% 0 fixed;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 100px 0;
-}
-
-#vips {
-  background: #E31837;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 100px 0;
-}
-
-#vips .container {
-  background: #fff;
-}
-
-#parents {
-  background: #fff url('../images/vigilsashbackdrop.jpg') 50% 0 fixed;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 100px 0;
-}
-
-#parents .container {
-  background-color: rgba(255,255,255,0.9);
-}
-
-#eventdetails {
-  background: #fff url('../images/lasers.jpg') 50% 0 fixed;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 100px 0;
-}
-
-#training {
-  background: #fff;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 50px 0 100px;
-}
-
-#eventdetails .container {
-  background: rgba(255,255,255,0.9);
-}
-
-#faq {
-  background: #fff;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 50px 0 100px;
-}
-
-#register {
-  background: #fff;
-  height: auto;
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  padding: 50px 0 100px;
 }
 
 .blur {
