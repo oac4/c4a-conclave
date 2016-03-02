@@ -1,17 +1,17 @@
 function CoCaRP() {
-    window.location.href = "c4a-conclave/CodeofConductAndRefundPolicy.html";
+    window.location.href = "/CodeofConductAndRefundPolicy.html";
 }
 
 function OtherInfoLink() {
-    window.location.href = "c4a-conclave/OtherInfo.html";
+    window.location.href = "/OtherInfo.html";
 }
 
 function DestinationLink() {
-    window.location.href = "c4a-conclave/destination.html";
+    window.location.href = "/destination.html";
 }
 
 function TrainingLink() {
-    window.location.href = "c4a-conclave/training.html";
+    window.location.href = "/training.html";
 }
 
 function RegistrationPage() {
