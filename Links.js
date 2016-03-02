@@ -1,5 +1,5 @@
 function CoCaRP() {
-    window.location.href = "CodeofConductAndRefundPolicy.html";
+    window.location.href = "CodeOfConductAndCancellationPolicy.html";
 }
 
 function OtherInfoLink() {
