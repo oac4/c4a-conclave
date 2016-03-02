@@ -15,5 +15,5 @@ function TrainingLink() {
 }
 
 function RegistrationPage() {
-    window.location.href = "c4a-conclave/Registration.html";
+    window.location.href = "/Registration.html";
 }
