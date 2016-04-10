@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,10 @@
     <title>Section C-4A Conclave 2016</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Font Faces -->
     <link href="/css/fonts.css" rel="stylesheet">
@@ -41,7 +42,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/event.html">Event Details</a></li>
                 <li><a href="/parents.html">For Parents</a></li>
                 <li><a href="/training.html">Training</a></li>
                 <li><a href="/faq.html">FAQs</a></li>
@@ -49,6 +51,7 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+
 
 <div class="jumbotron">
     <div class="container">
@@ -79,28 +82,44 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 welcomeLetter">
-            <blockquote>
-                <h2 class="mono">Intelligence Memo <small>#377-151</small></h2>
-                <h3 class="mono">Status <small class="text-danger">Top Secret</small></h3>
-                <h3 class="mono">Codename <small>7Ranges</small></h3>
-                <hr>
-                <p>Agents:</p>
-                <p>We need your help! The Section C-4A Conclave is rapidly approaching, and we need as many Arrowmen as possible to go undercover at the event. Your mission, should you choose to accept it, will begin Friday, 13 May 2016 at Seven Ranges Scout Reservation in Kensington, Ohio. We will launch the mission with an agency briefing on Friday night. On Saturday, all agents should be prepared for a full day of special ops training, reconnaissance missions, spy aptitude evaluations, and a series of covert challenges. You can expect all of this and more from the event, but some details remain classified.</p>
-                <p>Our intelligence also leads us to believe that a special operative, codenamed Mr. Jones, will be joining us on the mission. The identity of Mr. Jones must be protected at all costs. Access to this mission will be restricted only to those who are registered by May 8th. Do NOT delay! More details of this mission can be found on this classified site.</p>
-                <p>Your skills are required for this critical mission. I only hope that you will answer the call, and I wish you the best of luck!</p>
-                <footer>
-                    <p>Agent Michael<br>AKA The Chief</p>
-                </footer>
-            </blockquote>
-        </div>
-        <div class="col-md-4 text-center">
-            <h2>Special Guest:</h2>
-            <img src="/images/2016-hunter-jones.png" alt="Hunter Jones">
-            <div class="caption">
-                <h3>Hunter Jones <small>2016 National Chief</small></h3>
-                <p class="text-left">Hunter is from Middle Tennessee Council in Nashville, TN. He is an Eagle Scout and Vigil Honor member of Wa-Hi-Nasa Lodge. Hunter has served previously as section chief for SR-6 and the lodge chief of Wa-Hi-Nasa Lodge. He is the recipient of the Centurion and Founder’s Awards and is a James E. West Fellow. Hunter is studying animal science and pre-med at the University of Tennessee. In his spare time, he enjoys trap shooting, boxing and traveling.</p>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Mission Location
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <hr>
+                            <div id="googleMap"></div>
+                            <hr>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div>
     </div>
 
@@ -124,6 +143,30 @@
 
 <!-- BetterContactForms JavaScript -->
 <script type="text/javascript"> /* var bcf_settings = { buttonText:'Contact Us', buttonTop:'30%', language:'en_US' }; // Better Contact Form Settings */ (function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.src = "//bettercontactform.com/contact/media/8/3/830b0a68f54de7c5e8fe1da2f9a566cdb3916e75.js"; fjs.parentNode.insertBefore(js, fjs); }(document, "script", "bcf-render"));</script> <a id="bcf_trigger" href="http://bettercontactform.com" rel="bcf_trigger">Contact Form</a>
+
+<!-- Google Maps API JavaScript -->
+<script>
+    var map;
+    function initMap() {
+        console.log('123');
+
+        var mapDOM = document.getElementById("googleMap");
+        var myLatlng = new google.maps.LatLng(-34.397, 150.644);
+        var mapOptions = {
+            zoom: 8,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+        var map = new google.maps.Map(mapDOM, mapOptions);
+        console.log(map);
+
+//        map = new google.maps.Map(document.getElementById('googleMap'), {
+//            center: {lat: -34.397, lng: 150.644},
+//            zoom: 8
+//        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhsw_3MT3ekGrUeyVdM9Ah_1MA1K0tWA&callback=initMap" async defer></script>
 
 <!-- Application JavaScript -->
 <script src="/js/functions.js"></script>
