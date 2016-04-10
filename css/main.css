@@ -1,0 +1,44 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    font-family: museo_sans;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.mono{
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.navbar, .jumbotron{
+    font-family: museo_slab;
+}
+
+#countdown{
+    font-size: 1.5em;
+    margin: 25px 0;
+}
+#countdown .countdownLabel{
+    font-family: museo_slab_italic;
+}
+#countdown .days{}
+#countdown .days:after{
+    content: ' Days';
+    font-family: museo_sans;
+}
+#countdown .hours{}
+#countdown .hours:after{
+    content: ' Hours';
+    font-family: museo_sans;
+}
+#countdown .minutes{}
+#countdown .minutes:after{
+    content: ' Minutes';
+    font-family: museo_sans;
+}
+#countdown .seconds{}
+#countdown .seconds:after{
+    content: ' Seconds';
+    font-family: museo_sans;
+}
+
+.welcomeLetter .mono{
+
+}
