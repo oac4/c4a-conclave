@@ -57,6 +57,9 @@ dl dd:last-child{
 dl.bordered dd{
     border-bottom: 1px solid #ccc;
 }
+dl.bordered dd:last-child{
+    border-bottom: none;
+}
 
 #faqContainer dt{
     font-size: 1.25em;
