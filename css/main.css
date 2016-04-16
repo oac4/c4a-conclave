@@ -49,10 +49,13 @@ body {
 }
 dl dd{
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
 }
 dl dd:last-child{
     margin-bottom: inherit;
+}
+
+dl.bordered dd{
+    border-bottom: 1px solid #ccc;
 }
 
 #faqContainer dt{
