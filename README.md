@@ -1,6 +1,6 @@
 # c4a-conclave
 
-The website for the Area Leadership Training Conference (ALTC) in Central Region Area 4, Order of the Arrow, Boy Scouts
+The website for Conclaves in Section A, Central Region Area 4, Order of the Arrow, Boy Scouts
 of America.
 
 Visit us at [http://conclave.oa-c4a.org/](http://conclave.oa-c4a.org/)
