@@ -11,7 +11,7 @@ kramdown:
 ### END forced defaults - config will be honored if valid  ###
   input: GFM
   hard_wrap: false
-repository: oac4/altc
+repository: oac4/c4a-conclave
 gems:
   - jekyll-coffeescript
   - jekyll-feed
