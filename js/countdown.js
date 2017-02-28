@@ -18,7 +18,7 @@ $(function(){
         "use strict";
         var now  = new Date().getTime();
         var time = Math.round((target - now) / 1000);
-        $days.text(   clockDigit(floor(time, 24 * 60 * 60), 3)); // calculate days from timestamp
+        $days.text(   clockDigit(floor(time, 24 * 60 * 60), 2)); // calculate days from timestamp
         $hours.text(  clockDigit(floor(time, 60 * 60) % 24, 2)); // hours
         $minutes.text(clockDigit(floor(time, 60) % 60, 2));      // minutes
         $seconds.text(clockDigit(floor(time, 1) % 60, 2));       // seconds
