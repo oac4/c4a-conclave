@@ -48,6 +48,8 @@ a {
 }
 a:hover { text-decoration: none }
 
+#registrationLink:hover {text-decoration: underline;}
+
 body {font-family: 'museo_sans', sans-serif;background: #fff;font-size: 16px;color: #424242;line-height: 28px}
 .header {position: relative;height: 515px}
 .header-bg {position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: url(img/Website-Cover.png) no-repeat scroll 0 0;background-size: cover;z-index: 1}
