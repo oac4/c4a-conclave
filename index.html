@@ -97,12 +97,7 @@
                     </div>
                     <div class="customcontent">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="alert alert-success text-center" role="alert">Registration is open.
-                                    <a class="alert-link" id="registrationLink" href="https://events.oa-c4a.org" target="_blank">Sign-up now!</a>
-                                </div>
-                            </div>
-                            <div class="col-md-8 welcomeLetter">
+                            <div class="col-md-5 welcomeLetter">
                                 <blockquote>
                                     <h2>A Message from the Chief</h2>
                                     <img src="img/Conklin_JJ_C4A.jpg" alt="J.J. Conklin" width="200px" align="left">
@@ -135,21 +130,49 @@
                                     <h3>Forrest Gertin <br/>
                                         <small>2017 National Chief</small>
                                     </h3>
-                                    <p class="text-left">Forrest hails from the city of Rochester, NY. He is an Eagle
+                                    <p class="text-left">Forrest hails from the city of Rochester, NY. He is an
+                                        Eagle
                                         Scout and Vigil Honor member of Tschipey Achtu Lodge and is an assistant
-                                        Scoutmaster for Troop 750 in the Seneca Waterways Council. Previously, Forrest
-                                        served as section chief for NE-3A and is a recipient of the Founder’s Award from
+                                        Scoutmaster for Troop 750 in the Seneca Waterways Council. Previously,
+                                        Forrest
+                                        served as section chief for NE-3A and is a recipient of the Founder’s Award
+                                        from
                                         his lodge. Forrest is an international political economy major at Georgetown
                                         University. He participates in student government, theatre and debate, and
                                         enjoys playing percussion and cycling - and has even biked around one of the
                                         great lakes.</p>
                                 </div>
                             </div>
+                            <div class="col-md-3">
+                                <div id="regStats" class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Live Registration Stats</h3>
+                                    </div>
+                                    <div class="panel-body">Loading...</div>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Lodge</th>
+                                            <th>Registered</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                        <tfoot>
+                                        <tr class="active" style="font-weight: bold;">
+                                            <td>Total Registered</td>
+                                            <td id="totalRegCount"></td>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="text-center">
+                                    <a href="https://events.oa-c4a.org" class="btn btn-lg btn-success">Register Now!</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -207,6 +230,43 @@
 <script src="js/countdown.js"></script>
 <script src="js/functions.js"></script>
 
+<script>
+    $(function(){
+        function updateLiveRegStats(){
+            $.getJSON('https://events.oa-c4a.org/api/stats', function(data, textStatus, jqXHR){
+                var $regStats  = $('#regStats');
+                var $panelBody = $regStats.find('.panel-body');
+                var $table     = $regStats.find('table');
+                var $tbody     = $table.find('tbody');
+
+                $tbody.find('tr').remove();
+                $.each(data.lodges, function(i, lodge){
+                    $tbody.append(
+                        '<tr>' +
+                        '<td>' + lodge.name + '</td>' +
+                        '<td>' + lodge.count + '</td>' +
+                        '</tr>'
+                    );
+                });
+
+                $tbody.append(
+                    '<tr>' +
+                    '<td>Other Lodges</td>' +
+                    '<td>' + data.other.count + '</td>' +
+                    '</tr>'
+                );
+
+                $('#totalRegCount').html(data.total);
+                $panelBody.hide();
+                $table.show();
+            });
+            setTimeout(updateLiveRegStats, 5000);
+        }
+
+        updateLiveRegStats();
+    });
+</script>
+
 <!-- better contact form -->
 <script type="text/javascript">
     /* var bcf_settings = { buttonText:'Contact Us', buttonTop:'30%', language:'en_US' }; // Better Contact Form Settings */
@@ -216,7 +276,8 @@
         js.id       = id;
         js.src      = "//bettercontactform.com/contact/media/8/3/830b0a68f54de7c5e8fe1da2f9a566cdb3916e75.js";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, "script", "bcf-render"));</script>
+    }(document, "script", "bcf-render"));
+</script>
 <a id="bcf_trigger" href="http://bettercontactform.com" rel="bcf_trigger">Contact Form</a>
 
 </body>
